@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indicaciones Evento Final — Final Regional Junior y Senior Jalisco 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --naranja: #F5A623;
+    --naranja-dark: #E8920A;
+    --rosa: #E8197A;
+    --morado: #7B2D8B;
+    --azul: #2E86C1;
+    --teal: #1ABC9C;
+    --blanco: #FFFFFF;
+    --gris-claro: #FDF6EC;
+    --gris-medio: #F0E6D3;
+    --texto: #2C1810;
+    --texto-suave: #6B4C3B;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--gris-claro);
+    color: var(--texto);
+    line-height: 1.6;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, var(--naranja) 0%, var(--naranja-dark) 60%, #D4780A 100%);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 50%;
+  }
+
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: 10%;
+    width: 200px; height: 200px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
+
+  .header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 32px 32px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .logos {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .logo-badge {
+    background: white;
+    border-radius: 12px;
+    padding: 8px 16px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    color: var(--morado);
+    letter-spacing: 0.5px;
+  }
+
+  .logo-badge.tg { color: var(--teal); }
+
+  .header h1 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 2.6rem;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .header h1 span {
+    color: var(--rosa);
+    display: block;
+  }
+
+  .event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .meta-pill {
+    background: rgba(255,255,255,0.22);
+    backdrop-filter: blur(4px);
+    border: 1.5px solid rgba(255,255,255,0.35);
+    border-radius: 999px;
+    padding: 6px 16px;
+    color: white;
+    font-weight: 700;
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* ALERTA PRINCIPAL */
+  .alert-banner {
+    background: var(--rosa);
+    color: white;
+    text-align: center;
+    padding: 14px 24px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+  }
+
+  .alert-banner a { color: white; text-decoration: underline; }
+
+  /* CONTENEDOR PRINCIPAL */
+  .main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+  }
+
+  /* BIENVENIDA */
+  .welcome-card {
+    background: white;
+    border-radius: 20px;
+    padding: 32px 36px;
+    margin: 32px 0 24px;
+    border-left: 6px solid var(--naranja);
+    box-shadow: 0 4px 20px rgba(245,166,35,0.12);
+  }
+
+  .welcome-card p {
+    font-size: 1.05rem;
+    color: var(--texto-suave);
+    line-height: 1.75;
+  }
+
+  .welcome-card strong { color: var(--texto); }
+
+  /* SECCIÓN FECHAS LÍMITE */
+  .deadlines {
+    background: linear-gradient(135deg, var(--morado), #9B3DB8);
+    border-radius: 20px;
+    padding: 28px 32px;
+    margin: 24px 0;
+    color: white;
+  }
+
+  .deadlines h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .deadline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+  }
+
+  .deadline-item {
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    border-radius: 14px;
+    padding: 16px 18px;
+  }
+
+  .deadline-date {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--naranja);
+    margin-bottom: 4px;
+  }
+
+  .deadline-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  /* CHECKLIST POR AUDIENCIA */
+  .section-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--texto);
+    margin: 36px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--naranja);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .audience-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    padding: 8px 20px;
+    border-radius: 999px;
+    border: 2px solid transparent;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .tab-btn.participante { background: var(--rosa); color: white; }
+  .tab-btn.mentor { background: var(--teal); color: white; }
+  .tab-btn.padre { background: var(--azul); color: white; }
+
+  .checklist-card {
+    background: white;
+    border-radius: 20px;
+    padding: 28px 32px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+
+  .audience-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 2px dashed var(--gris-medio);
+  }
+
+  .audience-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+  }
+
+  .audience-icon.rosa { background: #FDE8F2; }
+  .audience-icon.teal { background: #E0FAF5; }
+  .audience-icon.azul { background: #E3F0FB; }
+
+  .audience-title {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #F5EDE0;
+  }
+
+  .checklist-item:last-child { border-bottom: none; }
+
+  .check-box {
+    width: 22px; height: 22px;
+    border: 2.5px solid var(--gris-medio);
+    border-radius: 6px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    background: white;
+  }
+
+  .check-text { font-size: 0.97rem; line-height: 1.5; }
+  .check-text strong { color: var(--texto); }
+  .check-text .tag {
+    display: inline-block;
+    background: #FDE8F2;
+    color: var(--rosa);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 1px 8px;
+    border-radius: 999px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .check-text .tag.info { background: #E3F0FB; color: var(--azul); }
+
+  /* PRESENTACION */
+  .present-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 600px) {
+    .present-grid { grid-template-columns: 1fr; }
+    .header h1 { font-size: 1.9rem; }
+    .deadline-grid { grid-template-columns: 1fr; }
+  }
+
+  .present-card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px 26px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+
+  .present-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .badge-expo { color: var(--rosa); }
+  .badge-pitch { color: var(--morado); }
+
+  .present-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .present-card li {
+    font-size: 0.93rem;
+    padding-left: 22px;
+    position: relative;
+    line-height: 1.5;
+    color: var(--texto-suave);
+  }
+
+  .present-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--naranja);
+    font-weight: 700;
+  }
+
+  .nota {
+    background: #FFF8E7;
+    border: 1.5px solid var(--naranja);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 0.88rem;
+    color: var(--texto-suave);
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  /* ORDEN DEL DIA */
+  .timeline {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: 0;
+    position: relative;
+  }
+
+  .timeline-time {
+    width: 90px;
+    flex-shrink: 0;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--morado);
+    padding: 16px 16px 16px 0;
+    text-align: right;
+  }
+
+  .timeline-dot-col {
+    width: 32px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-dot {
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--naranja);
+    margin-top: 20px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .timeline-line {
+    width: 2px;
+    background: var(--gris-medio);
+    flex: 1;
+  }
+
+  .timeline-content {
+    flex: 1;
+    padding: 12px 0 12px 12px;
+  }
+
+  .timeline-activity {
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    color: var(--texto);
+  }
+
+  .timeline-place {
+    font-size: 0.88rem;
+    color: var(--texto-suave);
+    margin-top: 2px;
+  }
+
+  /* INGRESO */
+  .ingreso-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 4px;
+  }
+
+  @media (max-width: 600px) { .ingreso-grid { grid-template-columns: 1fr; } }
+
+  .ingreso-card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px 26px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
+
+  .ingreso-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .ingreso-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ingreso-card li {
+    font-size: 0.93rem;
+    padding-left: 22px;
+    position: relative;
+    line-height: 1.5;
+    color: var(--texto-suave);
+  }
+
+  .ingreso-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-weight: 700;
+  }
+
+  /* CONSEJOS */
+  .consejos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 4px;
+  }
+
+  .consejo-card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+
+  .consejo-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .consejo-card p {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    line-height: 1.5;
+  }
+
+  /* CONTACTOS */
+  .contactos-table {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    margin-top: 4px;
+  }
+
+  .contactos-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 14px 24px;
+    border-bottom: 1px solid #F5EDE0;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.93rem;
+  }
+
+  .contactos-row:last-child { border-bottom: none; }
+
+  .contactos-row.header {
+    background: var(--naranja);
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+  }
+
+  .contactos-row:not(.header):hover { background: var(--gris-claro); }
+
+  .contactos-row a {
+    color: var(--rosa);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .contactos-row a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    .contactos-row { grid-template-columns: 1fr; gap: 4px; }
+    .contactos-row.header { display: none; }
+    .contactos-row { padding: 16px 20px; }
+  }
+
+  /* CHECKLIST FINAL */
+  .checklist-final {
+    background: linear-gradient(135deg, var(--naranja), var(--naranja-dark));
+    border-radius: 20px;
+    padding: 32px 36px;
+    margin-top: 24px;
+    color: white;
+  }
+
+  .checklist-final h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .final-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+  }
+
+  .final-item {
+    background: rgba(255,255,255,0.18);
+    border: 1.5px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .final-check {
+    width: 20px; height: 20px;
+    border: 2.5px solid rgba(255,255,255,0.7);
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+
+  /* SALAS PLACEHOLDER */
+  .salas-placeholder {
+    background: white;
+    border-radius: 20px;
+    padding: 36px;
+    text-align: center;
+    border: 2.5px dashed var(--naranja);
+    margin-top: 4px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  }
+
+  .salas-placeholder .big-icon { font-size: 3rem; margin-bottom: 12px; }
+  .salas-placeholder h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--texto);
+    margin-bottom: 8px;
+  }
+  .salas-placeholder p { color: var(--texto-suave); font-size: 0.95rem; }
+
+  /* FOOTER */
+  .footer {
+    background: var(--morado);
+    color: white;
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .footer a { color: var(--naranja); font-weight: 700; text-decoration: none; }
+
+  /* ANIMACIONES */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate { animation: fadeUp 0.5s ease both; }
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.2s; }
+  .delay-3 { animation-delay: 0.3s; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logos animate">
+      <span class="logo-badge tg">Technovation Girls México</span>
+      <span class="logo-badge">Mentoralia</span>
+    </div>
+    <h1 class="animate delay-1">
+      Indicaciones Evento Final
+      <span>Final Regional Junior y Senior</span>
+      Jalisco 2026
+    </h1>
+    <div class="event-meta animate delay-2">
+      <span class="meta-pill">📅 16 de mayo de 2026</span>
+      <span class="meta-pill">🕗 8:00 am – 3:00 pm</span>
+      <a href="https://www.google.com/maps/place/Universidad+Panamericana+Campus+Guadalajara/@20.6716,-103.3941,17z" target="_blank" class="meta-pill" style="text-decoration:none;">📍 Universidad Panamericana Guadalajara →</a>
+    </div>
+  </div>
+</header>
+
+<!-- ALERTA -->
+<div class="alert-banner">
+  ⚠️ Lee este documento completo con tu equipo, mentor/a y familia. Hay acciones que deben completarse <strong>antes del evento</strong>.
+</div>
+
+<main class="main">
+
+  <!-- BIENVENIDA -->
+  <div class="welcome-card animate">
+    <p>
+      ¡Felicidades por llegar hasta aquí! 🎉 Completar tu proyecto es un logro enorme. Estás a un paso de vivir el <strong>Evento Regional Junior y Senior 2026</strong>, donde presentarás tu proyecto frente al jurado que evaluará a tu equipo para la competencia internacional de Technovation Girls.<br><br>
+      Lee con atención las siguientes indicaciones junto con tu equipo, tu mentor/a y tu familia. Cada sección tiene información importante para que el día del evento todo salga perfecto.
+    </p>
+  </div>
+
+  <!-- FECHAS LÍMITE -->
+  <div class="deadlines animate">
+    <h2>⏰ Fechas límite — No te quedes fuera</h2>
+    <div class="deadline-grid">
+      <div class="deadline-item">
+        <div class="deadline-date">14 de mayo</div>
+        <div class="deadline-label">Envía tu presentación a<br>cynthia@mentoralia.org</div>
+      </div>
+      <div class="deadline-item">
+        <div class="deadline-date">9 de mayo</div>
+        <div class="deadline-label">Registro de adultos y acompañantes en Eventbrite</div>
+        <a href="https://www.eventbrite.com.mx/e/final-regional-junior-y-senior-jalisco-2026-tickets-1987868888357?aff=oddtdtcreator" target="_blank" style="display:inline-block; margin-top:10px; background:white; color:var(--morado); font-family:'Outfit',sans-serif; font-weight:700; font-size:0.82rem; padding:6px 14px; border-radius:999px; text-decoration:none;">Registrarme en Eventbrite →</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CHECKLIST POR AUDIENCIA -->
+  <h2 class="section-title">✅ ¿Qué debes hacer antes del evento?</h2>
+
+  <!-- PARTICIPANTE -->
+  <div class="checklist-card">
+    <div class="audience-header">
+      <div class="audience-icon rosa">👩‍💻</div>
+      <div>
+        <div class="audience-title" style="color: var(--rosa)">Para las participantes</div>
+        <div style="font-size:0.85rem; color:var(--texto-suave)">Revisa y completa cada punto con tu equipo</div>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Envía tu presentación antes del 14 de mayo</strong> al correo cynthia@mentoralia.org
+        — solo una integrante del equipo necesita enviarla. <span class="tag">Obligatorio</span>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Asunto del correo:</strong> Presentación [División] [Nombre del equipo] [Estado]<br>
+        <strong>Formato:</strong> PPT, PDF o link público (Google Slides, Canva, Dropbox)
+        <span class="tag">Obligatorio</span>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Permiso de uso de imagen</strong> — Si aún no lo has firmado, puedes hacerlo en la versión digital: <a href="https://mentoralia.github.io/autorizacion-medios/" target="_blank" style="color:var(--rosa);font-weight:700;">firmar en línea →</a> o llevarlo impreso el día del evento. Si ya lo entregaste a tu líder de club o firmaste la versión digital, ¡no necesitas hacer nada más! <span class="tag info">Opcional</span>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Descarga el demo de tu app</strong> en el celular que llevarás al evento (recuerda que no habrá internet). <span class="tag">Obligatorio</span>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Prepara el material de exposición:</strong> carteles, trípticos u otro material creativo. Espacio máximo: 120 cm de ancho en escritorio. No hay paredes ni mamparas. <span class="tag info">Recomendado</span>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Practica tu pitch de 4 minutos en español.</strong> Debe incluir: el problema y usuario, cómo funciona la app (con capturas), y su plan de negocio. <span class="tag">Obligatorio</span>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Revisa en qué sala presentarás tu pitch</strong> (la información se enviará días antes del evento). <span class="tag">Obligatorio</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENTOR -->
+  <div class="checklist-card">
+    <div class="audience-header">
+      <div class="audience-icon teal">🧑‍🏫</div>
+      <div>
+        <div class="audience-title" style="color: var(--teal)">Para mentores y mentoras</div>
+        <div style="font-size:0.85rem; color:var(--texto-suave)">Tu acompañamiento hace la diferencia</div>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Regístrate en Eventbrite</strong> como máximo el 9 de mayo. Si necesitas estacionamiento, solicitarlo en el registro. <a href="https://www.eventbrite.com.mx/e/final-regional-junior-y-senior-jalisco-2026-tickets-1987868888357?aff=oddtdtcreator" target="_blank" style="color:var(--rosa);font-weight:700;">Registrarme →</a> <span class="tag">Obligatorio</span>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Apoya al equipo</strong> con el envío de la presentación si lo necesitan — puedes enviarla tú en su nombre.
+        <span class="tag info">Apoyo</span>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Lleva identificación oficial</strong> el día del evento. <span class="tag">Obligatorio</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PADRES -->
+  <div class="checklist-card">
+    <div class="audience-header">
+      <div class="audience-icon azul">👨‍👩‍👧</div>
+      <div>
+        <div class="audience-title" style="color: var(--azul)">Para mamás, papás y tutores</div>
+        <div style="font-size:0.85rem; color:var(--texto-suave)">Su apoyo es fundamental para el equipo</div>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Regístrate en Eventbrite</strong> como máximo el 9 de mayo. Si necesitas estacionamiento, solicitarlo en el registro.
+        <a href="https://www.eventbrite.com.mx/e/final-regional-junior-y-senior-jalisco-2026-tickets-1987868888357?aff=oddtdtcreator" target="_blank" style="color:var(--rosa);font-weight:700;">Registrarme →</a>
+        <span class="tag">Obligatorio</span>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Permiso de uso de imagen</strong> — Si tu hija aún no lo ha firmado, pueden hacerlo en la versión digital: <a href="https://mentoralia.github.io/autorizacion-medios/" target="_blank" style="color:var(--rosa);font-weight:700;">firmar en línea →</a> o llevarlo impreso el día del evento. Si ya lo entregó con su líder de club o lo firmó digitalmente, ¡ya está! <span class="tag info">Opcional</span>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        <strong>Lleva identificación oficial</strong> el día del evento. <span class="tag">Obligatorio</span>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="check-box"></div>
+      <div class="check-text">
+        Si tu hija tiene <strong>alguna alergia alimentaria</strong>, verifica el lunch del evento (sándwich de jamón, agua y fruta) y toma las precauciones necesarias. <span class="tag info">Informativo</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CÓMO PRESENTAR -->
+  <h2 class="section-title">🎤 Cómo presentar tu proyecto</h2>
+  <div class="present-grid">
+    <div class="present-card">
+      <h3><span style="font-size:1.3rem">🖼️</span> <span class="badge-expo">La Expo</span></h3>
+      <ul>
+        <li>Espacio de hasta <strong>120 cm de ancho</strong> en escritorio</li>
+        <li>Carteles, trípticos o material creativo (sin proyector)</li>
+        <li>Celular con el demo de tu app descargado</li>
+        <li>No hay internet ni electricidad — lleva batería portátil</li>
+        <li>No hay paredes ni mamparas para pegar carteles</li>
+      </ul>
+      <div class="nota">💡 No necesitas gastar mucho — recuerda reciclar, reusar y reducir.</div>
+    </div>
+    <div class="present-card">
+      <h3><span style="font-size:1.3rem">🎯</span> <span class="badge-pitch">El Pitch</span></h3>
+      <ul>
+        <li><strong>4 minutos</strong> en español</li>
+        <li>Alguien te indicará el tiempo con carteles</li>
+        <li>No es obligatorio que todas participen</li>
+        <li>Incluye: problema + usuario, cómo funciona la app, plan de negocio</li>
+        <li>Puede ser el mismo del video o modificado sin cambiar la esencia</li>
+      </ul>
+      <div class="nota">💡 Puedes usar capturas de pantalla de tu app en la presentación.</div>
+    </div>
+  </div>
+
+  <!-- ORDEN DEL DÍA -->
+  <h2 class="section-title">📅 Orden del día</h2>
+  <div style="background:white; border-radius:20px; padding:28px 32px; box-shadow:0 4px 16px rgba(0,0,0,0.06);">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">8:00 AM</div>
+        <div class="timeline-dot-col"><div class="timeline-dot" style="background:var(--rosa)"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content"><div class="timeline-activity">Registro y montaje 1</div><div class="timeline-place">📍 Entrada de Poliforo</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">9:00 AM</div>
+        <div class="timeline-dot-col"><div class="timeline-dot" style="background:var(--naranja)"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content"><div class="timeline-activity">Inauguración</div><div class="timeline-place">📍 Poliforo</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">9:30 AM</div>
+        <div class="timeline-dot-col"><div class="timeline-dot" style="background:var(--morado)"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content"><div class="timeline-activity">Ronda 1 — Exposición y Pitch</div><div class="timeline-place">📍 Simultáneo: Explanada y 6 salas</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">10:45</div>
+        <div class="timeline-dot-col"><div class="timeline-dot" style="background:var(--teal)"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content"><div class="timeline-activity">Break / Montaje 2</div><div class="timeline-place">📍 Cambio de aulas y expo</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">11:15</div>
+        <div class="timeline-dot-col"><div class="timeline-dot" style="background:var(--rosa)"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content"><div class="timeline-activity">Ronda 2 — Exposición y Pitch</div><div class="timeline-place">📍 Simultáneo: Explanada y 6 salas</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">12:30</div>
+        <div class="timeline-dot-col"><div class="timeline-dot" style="background:var(--naranja)"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content"><div class="timeline-activity">Break comida</div><div class="timeline-place">📍 Entrada de Poliforo</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">12:30 PM</div>
+        <div class="timeline-dot-col"><div class="timeline-dot" style="background:var(--azul)"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content"><div class="timeline-activity">Cierre de evaluaciones y selección de representantes</div><div class="timeline-place">📍 Auditorio 2</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">13:15</div>
+        <div class="timeline-dot-col"><div class="timeline-dot" style="background:var(--naranja)"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content"><div class="timeline-activity">Speakers</div><div class="timeline-place">📍 Poliforo</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">14:00 PM</div>
+        <div class="timeline-dot-col"><div class="timeline-dot" style="background:var(--rosa)"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content"><div class="timeline-activity">Premiación</div><div class="timeline-place">📍 Poliforo</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">14:40 PM</div>
+        <div class="timeline-dot-col"><div class="timeline-dot" style="background:var(--morado)"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content"><div class="timeline-activity">Foto grupal</div><div class="timeline-place">📍 Poliforo</div></div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">14:45</div>
+        <div class="timeline-dot-col"><div class="timeline-dot" style="background:var(--teal)"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content"><div class="timeline-activity">Salida</div><div class="timeline-place"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TU SALA -->
+  <h2 class="section-title">🏫 Tu sala de pitch</h2>
+  <p style="color:var(--texto-suave); font-size:0.97rem; margin-bottom:20px;">Busca el nombre de tu equipo y anota tu sala. Llega puntual a las 11:15 directamente a tu sala asignada.</p>
+
+  <!-- BUSCADOR -->
+  <div style="margin-bottom:24px;">
+    <input type="text" id="buscador" onkeyup="buscarEquipo()" placeholder="🔍 Escribe el nombre de tu equipo..." style="width:100%; padding:14px 20px; border-radius:999px; border:2.5px solid var(--naranja); font-family:'Nunito',sans-serif; font-size:1rem; outline:none; color:var(--texto); background:white; box-shadow:0 4px 12px rgba(245,166,35,0.15);">
+  </div>
+  <div id="resultado-busqueda" style="display:none; background:white; border-radius:16px; padding:20px 24px; margin-bottom:24px; border:2.5px solid var(--teal); box-shadow:0 4px 16px rgba(26,188,156,0.15);">
+    <div style="font-size:0.85rem; color:var(--texto-suave); margin-bottom:4px;">Tu equipo está en:</div>
+    <div id="resultado-texto" style="font-family:'Outfit',sans-serif; font-weight:800; font-size:1.4rem; color:var(--teal);"></div>
+  </div>
+  <div id="sin-resultado" style="display:none; background:#FFF0F5; border-radius:16px; padding:16px 24px; margin-bottom:24px; border:2px solid var(--rosa);">
+    <div style="color:var(--rosa); font-weight:700; font-size:0.95rem;">No encontramos ese equipo. Verifica la ortografía o consulta la tabla completa abajo.</div>
+  </div>
+
+  <!-- GRID DE SALAS -->
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px;">
+
+    <!-- A1 JUNIOR -->
+    <div class="sala-card" style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.07);">
+      <div style="background:var(--rosa); padding:14px 20px;">
+        <div style="font-size:0.75rem; color:rgba(255,255,255,0.8); font-weight:700; letter-spacing:1px; text-transform:uppercase;">Junior</div>
+        <div style="font-family:'Outfit',sans-serif; font-weight:800; font-size:1.4rem; color:white;">Sala A1</div>
+      </div>
+      <ul style="list-style:none; padding:12px 20px 16px;">
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Bloomy</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Crayolas</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Digital femme</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">DreamHunters</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Finnova</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Juntas por un mundo mejor</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">MOON TEAM</li>
+        <li style="padding:7px 0; font-size:0.93rem; color:var(--texto);">VOZ VALIENTE</li>
+      </ul>
+    </div>
+
+    <!-- A2 JUNIOR -->
+    <div class="sala-card" style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.07);">
+      <div style="background:var(--naranja); padding:14px 20px;">
+        <div style="font-size:0.75rem; color:rgba(255,255,255,0.8); font-weight:700; letter-spacing:1px; text-transform:uppercase;">Junior</div>
+        <div style="font-family:'Outfit',sans-serif; font-weight:800; font-size:1.4rem; color:white;">Sala A2</div>
+      </div>
+      <ul style="list-style:none; padding:12px 20px 16px;">
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Chicas fuertes</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Codigo Violeta Guadalajara</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Duo estrella</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">GeSaPao delively</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">GirlsForTech</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Osori-Kaseki Team</li>
+        <li style="padding:7px 0; font-size:0.93rem; color:var(--texto);">Tech Nova 💫</li>
+      </ul>
+    </div>
+
+    <!-- A3 JUNIOR -->
+    <div class="sala-card" style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.07);">
+      <div style="background:var(--morado); padding:14px 20px;">
+        <div style="font-size:0.75rem; color:rgba(255,255,255,0.8); font-weight:700; letter-spacing:1px; text-transform:uppercase;">Junior</div>
+        <div style="font-family:'Outfit',sans-serif; font-weight:800; font-size:1.4rem; color:white;">Sala A3</div>
+      </div>
+      <ul style="list-style:none; padding:12px 20px 16px;">
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">CAP</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Cecytej San Pedro 30</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">CLAGA</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Equipo Emociones</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Fisios en acción</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Protegiendo patitas</li>
+        <li style="padding:7px 0; font-size:0.93rem; color:var(--texto);">RAICES Y ALAS</li>
+      </ul>
+    </div>
+
+    <!-- A4 JUNIOR -->
+    <div class="sala-card" style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.07);">
+      <div style="background:var(--azul); padding:14px 20px;">
+        <div style="font-size:0.75rem; color:rgba(255,255,255,0.8); font-weight:700; letter-spacing:1px; text-transform:uppercase;">Junior</div>
+        <div style="font-family:'Outfit',sans-serif; font-weight:800; font-size:1.4rem; color:white;">Sala A4</div>
+      </div>
+      <ul style="list-style:none; padding:12px 20px 16px;">
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Fenix Digital</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Future Minds</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">PERLA</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">SheCodes Elite</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Task up</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">The Invincible Girls</li>
+        <li style="padding:7px 0; font-size:0.93rem; color:var(--texto);">TONALLI</li>
+      </ul>
+    </div>
+
+    <!-- A5 SENIOR -->
+    <div class="sala-card" style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.07);">
+      <div style="background:var(--teal); padding:14px 20px;">
+        <div style="font-size:0.75rem; color:rgba(255,255,255,0.8); font-weight:700; letter-spacing:1px; text-transform:uppercase;">Senior</div>
+        <div style="font-family:'Outfit',sans-serif; font-weight:800; font-size:1.4rem; color:white;">Sala A5</div>
+      </div>
+      <ul style="list-style:none; padding:12px 20px 16px;">
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Adeleone</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">BLOOM WALLET</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Glucolife</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Luminas</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Nexuss</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Safety Code</li>
+        <li style="padding:7px 0; font-size:0.93rem; color:var(--texto);">VashioNA</li>
+      </ul>
+    </div>
+
+    <!-- A6 SENIOR -->
+    <div class="sala-card" style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 4px 16px rgba(0,0,0,0.07);">
+      <div style="background:#E67E22; padding:14px 20px;">
+        <div style="font-size:0.75rem; color:rgba(255,255,255,0.8); font-weight:700; letter-spacing:1px; text-transform:uppercase;">Senior</div>
+        <div style="font-family:'Outfit',sans-serif; font-weight:800; font-size:1.4rem; color:white;">Sala A6</div>
+      </div>
+      <ul style="list-style:none; padding:12px 20px 16px;">
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Cecytej Chulavista 2</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Esencia H2O</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Harmonia</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">Luminux</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">NIFNW</li>
+        <li style="padding:7px 0; border-bottom:1px solid var(--gris-medio); font-size:0.93rem; color:var(--texto);">SECA</li>
+        <li style="padding:7px 0; font-size:0.93rem; color:var(--texto);">Visión ecológica</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <script>
+    const salas = {
+      "Bloomy": "Sala A1 — Junior",
+      "Crayolas": "Sala A1 — Junior",
+      "Digital femme": "Sala A1 — Junior",
+      "DreamHunters": "Sala A1 — Junior",
+      "Finnova": "Sala A1 — Junior",
+      "Juntas por un mundo mejor": "Sala A1 — Junior",
+      "MOON TEAM": "Sala A1 — Junior",
+      "VOZ VALIENTE": "Sala A1 — Junior",
+      "Chicas fuertes": "Sala A2 — Junior",
+      "Codigo Violeta Guadalajara": "Sala A2 — Junior",
+      "Duo estrella": "Sala A2 — Junior",
+      "GeSaPao delively": "Sala A2 — Junior",
+      "GirlsForTech": "Sala A2 — Junior",
+      "Osori-Kaseki Team": "Sala A2 — Junior",
+      "Tech Nova": "Sala A2 — Junior",
+      "CAP": "Sala A3 — Junior",
+      "Cecytej San Pedro 30": "Sala A3 — Junior",
+      "CLAGA": "Sala A3 — Junior",
+      "Equipo Emociones": "Sala A3 — Junior",
+      "Fisios en acción": "Sala A3 — Junior",
+      "Protegiendo patitas": "Sala A3 — Junior",
+      "RAICES Y ALAS": "Sala A3 — Junior",
+      "Fenix Digital": "Sala A4 — Junior",
+      "Future Minds": "Sala A4 — Junior",
+      "PERLA": "Sala A4 — Junior",
+      "SheCodes Elite": "Sala A4 — Junior",
+      "Task up": "Sala A4 — Junior",
+      "The Invincible Girls": "Sala A4 — Junior",
+      "TONALLI": "Sala A4 — Junior",
+      "Adeleone": "Sala A5 — Senior",
+      "BLOOM WALLET": "Sala A5 — Senior",
+      "Glucolife": "Sala A5 — Senior",
+      "Luminas": "Sala A5 — Senior",
+      "Nexuss": "Sala A5 — Senior",
+      "Safety Code": "Sala A5 — Senior",
+      "VashioNA": "Sala A5 — Senior",
+      "Cecytej Chulavista 2": "Sala A6 — Senior",
+      "Esencia H2O": "Sala A6 — Senior",
+      "Harmonia": "Sala A6 — Senior",
+      "Luminux": "Sala A6 — Senior",
+      "NIFNW": "Sala A6 — Senior",
+      "SECA": "Sala A6 — Senior",
+      "Visión ecológica": "Sala A6 — Senior",
+    };
+
+    function buscarEquipo() {
+      const query = document.getElementById('buscador').value.trim().toLowerCase();
+      const resultado = document.getElementById('resultado-busqueda');
+      const texto = document.getElementById('resultado-texto');
+      const sinResultado = document.getElementById('sin-resultado');
+
+      if (query.length < 2) {
+        resultado.style.display = 'none';
+        sinResultado.style.display = 'none';
+        return;
+      }
+
+      const encontrado = Object.entries(salas).find(([equipo]) =>
+        equipo.toLowerCase().includes(query)
+      );
+
+      if (encontrado) {
+        texto.textContent = encontrado[0] + ' → ' + encontrado[1];
+        resultado.style.display = 'block';
+        sinResultado.style.display = 'none';
+      } else {
+        resultado.style.display = 'none';
+        sinResultado.style.display = 'block';
+      }
+    }
+  </script>
+
+  <!-- INDICACIONES DE INGRESO -->
+  <h2 class="section-title">🚪 Indicaciones de ingreso</h2>
+  <div class="ingreso-grid">
+    <div class="ingreso-card">
+      <h3 style="color:var(--rosa)">👩‍💻 Participantes</h3>
+      <ul>
+        <li>Un voluntario te guiará a tu espacio asignado</li>
+        <li>Llega puntual a las 8:00 AM para registro y montaje</li>
+      </ul>
+    </div>
+    <div class="ingreso-card">
+      <h3 style="color:var(--azul)">👨‍👩‍👧 Adultos y acompañantes</h3>
+      <ul>
+        <li>Lleva identificación oficial</li>
+        <li>Regístrate en <a href="https://www.eventbrite.com.mx/e/final-regional-junior-y-senior-jalisco-2026-tickets-1987868888357?aff=oddtdtcreator" target="_blank" style="color:var(--rosa);font-weight:700;">Eventbrite</a> antes del 9 de mayo</li>
+        <li>Si necesitas estacionamiento, solicitarlo en tu registro de <a href="https://www.eventbrite.com.mx/e/final-regional-junior-y-senior-jalisco-2026-tickets-1987868888357?aff=oddtdtcreator" target="_blank" style="color:var(--rosa);font-weight:700;">Eventbrite</a></li>
+        <li>Los espacios de estacionamiento se comunicarán por correo días antes</li>
+        <li>Un voluntario estará disponible para guiarte</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CONSEJOS -->
+  <h2 class="section-title">💡 Consejos adicionales</h2>
+  <div class="consejos-grid">
+    <div class="consejo-card">
+      <span class="consejo-icon">🔋</span>
+      <p><strong>Sin electricidad ni internet.</strong> Lleva tus dispositivos cargados o una batería portátil.</p>
+    </div>
+    <div class="consejo-card">
+      <span class="consejo-icon">👗</span>
+      <p><strong>Sin dress code.</strong> Viste lo que te haga sentir cómoda y refleje tu proyecto.</p>
+    </div>
+    <div class="consejo-card">
+      <span class="consejo-icon">🥪</span>
+      <p><strong>Lunch incluido.</strong> Sándwich de jamón, agua y fruta. Si tienes alergias, toma precauciones.</p>
+    </div>
+    <div class="consejo-card">
+      <span class="consejo-icon">🤝</span>
+      <p><strong>Sana competencia.</strong> Recuerda el Código de Comportamiento del evento.</p>
+    </div>
+    <div class="consejo-card">
+      <span class="consejo-icon">☕</span>
+      <p><strong>Cafetería disponible</strong> para familiares, mentores y público en general.</p>
+    </div>
+    <div class="consejo-card">
+      <span class="consejo-icon">♻️</span>
+      <p><strong>Cuida el medio ambiente.</strong> Usa materiales reciclados o reutilizados para tu expo.</p>
+    </div>
+  </div>
+
+  <!-- CONTACTOS -->
+  <h2 class="section-title">📬 ¿Tienes dudas? Escríbenos</h2>
+  <div class="contactos-table">
+    <div class="contactos-row header">
+      <div>Si tu duda es sobre…</div>
+      <div>Escribe a…</div>
+      <div>Notas</div>
+    </div>
+    <div class="contactos-row">
+      <div>Envío de presentación / pitch</div>
+      <div><a href="mailto:cynthia@mentoralia.org">cynthia@mentoralia.org</a></div>
+      <div>Antes del 14 de mayo</div>
+    </div>
+    <div class="contactos-row">
+      <div>Registro en <a href="https://www.eventbrite.com.mx/e/final-regional-junior-y-senior-jalisco-2026-tickets-1987868888357?aff=oddtdtcreator" target="_blank" style="color:var(--rosa);font-weight:700;">Eventbrite</a> / estacionamiento</div>
+      <div><a href="mailto:info@mentoralia.org">info@mentoralia.org</a></div>
+      <div>Antes del 9 de mayo</div>
+    </div>
+    <div class="contactos-row">
+      <div>Permiso de uso de imagen</div>
+      <div><a href="mailto:info@mentoralia.org">info@mentoralia.org</a></div>
+      <div>Llevar impreso el día del evento</div>
+    </div>
+    <div class="contactos-row">
+      <div>Cualquier otra duda</div>
+      <div><a href="mailto:info@mentoralia.org">info@mentoralia.org</a></div>
+      <div>Con gusto te ayudamos</div>
+    </div>
+  </div>
+
+  <!-- WHATSAPP -->
+  <h2 class="section-title">💬 Mantente informada</h2>
+  <div style="background:white; border-radius:20px; padding:28px 32px; box-shadow:0 4px 16px rgba(0,0,0,0.06); display:flex; align-items:center; gap:24px; flex-wrap:wrap;">
+    <div style="font-size:3rem; flex-shrink:0;">📲</div>
+    <div style="flex:1; min-width:200px;">
+      <div style="font-family:'Outfit',sans-serif; font-weight:800; font-size:1.1rem; color:var(--texto); margin-bottom:6px;">Únete al grupo de avisos de WhatsApp</div>
+      <p style="font-size:0.95rem; color:var(--texto-suave); margin-bottom:14px;">Este es un canal de <strong>solo lectura</strong> para garantizar que la información de Jalisco esté siempre a la mano y bien organizada. Ahí recibirás actualizaciones importantes antes y durante el evento.</p>
+      <a href="https://chat.whatsapp.com/GV9MIKBxwbs5JSVANqAvrH" target="_blank" style="display:inline-block; background:#25D366; color:white; font-family:'Outfit',sans-serif; font-weight:700; font-size:0.95rem; padding:10px 22px; border-radius:999px; text-decoration:none;">Unirme al grupo →</a>
+    </div>
+  </div>
+
+  <!-- CHECKLIST FINAL -->
+  <div class="checklist-final">
+    <h2>🎒 Lista del día del evento — ¿Ya tienes todo?</h2>
+    <div class="final-items">
+      <div class="final-item"><div class="final-check"></div>Permiso de imagen firmado (digital o impreso, si aplica)</div>
+      <div class="final-item"><div class="final-check"></div>Celular con demo de la app descargado</div>
+      <div class="final-item"><div class="final-check"></div>Batería portátil cargada</div>
+      <div class="final-item"><div class="final-check"></div>Material de exposición (carteles, etc.)</div>
+      <div class="final-item"><div class="final-check"></div>Presentación enviada antes del 14 de mayo</div>
+      <div class="final-item"><div class="final-check"></div>Adultos registrados en <a href="https://www.eventbrite.com.mx/e/final-regional-junior-y-senior-jalisco-2026-tickets-1987868888357?aff=oddtdtcreator" target="_blank" style="color:var(--texto);font-weight:700;text-decoration:underline;">Eventbrite</a></div>
+      <div class="final-item"><div class="final-check"></div>Identificación oficial (adultos)</div>
+      <div class="final-item"><div class="final-check"></div>Conoces tu sala de pitch</div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <strong>¿Dudas de última hora?</strong> Escríbenos a <a href="mailto:info@mentoralia.org">info@mentoralia.org</a><br>
+  <span style="opacity:0.8; font-size:0.85rem;">Technovation Girls México · Mentoralia · Final Regional Junior y Senior Jalisco 2026</span>
+</footer>
+
+</body>
+</html>
